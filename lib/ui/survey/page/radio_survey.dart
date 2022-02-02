@@ -7,10 +7,18 @@ class RadioSurvey extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(30.0),
         child: Column(
           children: [
-            Text('Pick a superhero'),
+            Text('Pick a superhero',
+                style: TextStyle(
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue)),
+            SizedBox(
+              width: 30,
+              height: 30,
+            ),
             Column(
               children: [
                 ...List.generate(

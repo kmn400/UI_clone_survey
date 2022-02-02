@@ -13,39 +13,44 @@ class LoginScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset('asset/image/survey.png'),
+                SizedBox(
+                  width: 30,
+                  height: 30,
+                ),
                 const Text('Jetsurvey'),
-                const Text('Better surveys with Jetpack compose'),
+                const Text('Better surveys with Jetpack Compose'),
               ],
             ),
           ),
           Expanded(
-              child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                const Text('Sign in or create an account'),
-                TextFormField(
-                  decoration: const InputDecoration(
-                      hintText: 'Email', border: UnderlineInputBorder()),
-                ),
-                ElevatedButton(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  const Text('Sign in or create an account'),
+                  TextFormField(
+                    decoration: const InputDecoration(
+                        hintText: 'Email', border: OutlineInputBorder()),
+                  ),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: const Size.fromHeight(50.0),
+                      ),
+                      onPressed: () {},
+                      child: const Text('Continue')),
+                  const Text('or'),
+                  ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       minimumSize: const Size.fromHeight(50.0),
                     ),
                     onPressed: () {},
-                    child: const Text('Continue')),
-                const Text('or'),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    minimumSize: const Size.fromHeight(50.0),
-                  ),
-                  onPressed: () {},
-                  child: const Text('sign in as guest'),
-                )
-              ],
+                    child: const Text('Sign in as guest'),
+                  )
+                ],
+              ),
             ),
-          ))
+          ),
         ],
       ),
     );
